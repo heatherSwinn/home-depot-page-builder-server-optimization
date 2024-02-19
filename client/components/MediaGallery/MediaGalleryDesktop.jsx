@@ -82,7 +82,6 @@ const MediaGalleryDesktop = ({
   };
 
   const showThumbnails = () => {
-    console.log(images);
     const visibleThumbnails = images.slice(0, 5); // limit to 6
     const remainingThumbnailsCount = images.length - visibleThumbnails.length;
 

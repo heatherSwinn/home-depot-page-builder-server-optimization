@@ -38,10 +38,6 @@ const App = () => {
     setIsReviewModal(false);
   };
 
-  const ryobiDrill = 1;
-
-  const dewaltDrill = 2;
-
   useEffect(() => {
     const { pathname } = window.location;
     const productId = pathname.split("/").pop();
