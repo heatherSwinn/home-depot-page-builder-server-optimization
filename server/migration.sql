@@ -11,6 +11,7 @@ DROP TABLE IF EXISTS store_local CASCADE;
 DROP TABLE IF EXISTS warranty_certifications CASCADE;
 DROP TABLE IF EXISTS customer_questions CASCADE;
 DROP TABLE IF EXISTS review_images CASCADE;
+DROP TABLE IF EXISTS productDetails_images;
 
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,

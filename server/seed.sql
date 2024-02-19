@@ -293,7 +293,7 @@ INSERT INTO customer_questions (product_id, question_content, user_name, questio
     'Pinoy',
     '2023-12-03',
     'RYOBI',
-    'Hello, Pinoy - Thank you for your question. If your unit has a 'VNM' on the data label for the model number, it was created in Vietnam, however, our products are made all over the world. I hope this helps! Additionally, if you need further support, then a RYOBI Customer Experience Professional is here for you, Monday - Friday from 9 am to 6 pm (EST) when you call or text us at 1.800.525.2579 or through email or live chat when you visit us at https://www.ryobitools.com/support/contact. And thank you again for your interest in the ONE+ HP 18V Brushless Cordless 1/2 in. Drill/Driver and Impact Driver Kit w/(2) 2.0 Ah Batteries, Charger, and Bag. - Teyana',
+    'Hello, Pinoy - Thank you for your question. If your unit has a ''VNM'' on the data label for the model number, it was created in Vietnam, however, our products are made all over the world. I hope this helps! Additionally, if you need further support, then a RYOBI Customer Experience Professional is here for you, Monday - Friday from 9 am to 6 pm (EST) when you call or text us at 1.800.525.2579 or through email or live chat when you visit us at https://www.ryobitools.com/support/contact. And thank you again for your interest in the ONE+ HP 18V Brushless Cordless 1/2 in. Drill/Driver and Impact Driver Kit w/(2) 2.0 Ah Batteries, Charger, and Bag. - Teyana',
     '2023-12-04'
 );
 
