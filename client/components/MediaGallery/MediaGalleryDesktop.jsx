@@ -4,6 +4,11 @@ import axios from "axios";
 import { useAppContext } from "client/components/AppContext.jsx";
 import printIcon from "client/assets/printIcon.png";
 import shareIcon from "client/assets/shareIcon.png";
+import fiveStarIcon from "client/assets/5-star-pic.png";
+import fourStarIcon from "client/assets/4-star-pic.png";
+import threeStarIcon from "client/assets/3-star-pic.png";
+import twoStarIcon from "client/assets/2-star-pic.png";
+import oneStarIcon from "client/assets/1-star-pic.png";
 
 const MediaGalleryDesktop = ({
   currentProduct,
@@ -42,16 +47,35 @@ const MediaGalleryDesktop = ({
   }, [currentProduct]);
 
   const checkReviewStatus = (number) => {
-    let basePath = "./components/Accordion/CustomerReviewsContent/imgStar/";
-    let fileExtension = "-star-pic.png";
+    const getReviewUrl = (num) => {
+      switch (num) {
+        case 5:
+          return fiveStarIcon;
+        case 4:
+          return fourStarIcon;
+        case 3:
+          return threeStarIcon;
+        case 2:
+          return twoStarIcon;
+        case 1:
+          return oneStarIcon;
+        default:
+          return fiveStarIcon;
+      }
+    };
     if (!number) {
       return "No Current Rating";
     } else {
+      switch (number) {
+        case 5:
+      }
+
       return (
         <img
           style={{ width: `${starNum * 20} + 10}px` }}
           className="star-icon"
-          src={`${basePath}${number}${fileExtension}`}
+          src={getReviewUrl(number)}
+          alt="Star Icon"
         ></img>
       );
     }
@@ -171,19 +195,13 @@ const MediaGalleryDesktop = ({
         <div className="gallery-share-print-container">
           <div className="gallery-share-container">
             <button className="gallery-share-button">
-              <img
-                src={shareIcon}
-                alt="Share Icon"
-              ></img>
+              <img src={shareIcon} alt="Share Icon"></img>
               Share
             </button>
           </div>
           <div className="gallery-print-container">
             <button className="gallery-print-button">
-              <img
-                src={printIcon}
-                alt="Print Icon"
-              ></img>
+              <img src={printIcon} alt="Print Icon"></img>
               Print
             </button>
           </div>
