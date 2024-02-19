@@ -179,7 +179,8 @@ const MediaGalleryDesktop = ({
           <div className="gallery-print-container">
             <button className="gallery-print-button">
               <img
-                src="./components/MediaGallery/icons/printIcon.png"
+                // src="./components/MediaGallery/icons/printIcon.png"
+                src="./assets/printIcon.png"
                 alt="print icon"
               ></img>
               Print
