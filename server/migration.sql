@@ -11,7 +11,7 @@ DROP TABLE IF EXISTS store_local CASCADE;
 DROP TABLE IF EXISTS warranty_certifications CASCADE;
 DROP TABLE IF EXISTS customer_questions CASCADE;
 DROP TABLE IF EXISTS review_images CASCADE;
-DROP TABLE IF EXISTS productDetails_images;
+DROP TABLE IF EXISTS productDetails_images CASCADE;
 
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,
@@ -45,7 +45,8 @@ CREATE TABLE reviews (
   reviewer_name VARCHAR,
   rating INT CHECK (rating >= 1 AND rating <=5),
   title TEXT,
-  review_date DATE
+  review_date DATE,
+  is_recommended BOOLEAN
 );
 
 CREATE TABLE img_urls (

@@ -1,9 +1,9 @@
--- INSERT INTO products (id, product_name, manufacturer, price, has_warranty) VALUES
---     (2,
---     'ATOMIC 20V MAX Lithium-Ion Cordless 1/4 in. Brushless Impact Driver Kit, 5 Ah Battery, Charger, and Bag',
---     'DEWALT',
---      169.00,
---       false);
+INSERT INTO products (id, product_name, manufacturer, price, has_warranty) VALUES
+    (2,
+    'ATOMIC 20V MAX Lithium-Ion Cordless 1/4 in. Brushless Impact Driver Kit, 5 Ah Battery, Charger, and Bag',
+    'DEWALT',
+     169.00,
+      false);
 
 DELETE FROM specifications_details WHERE product_id =2;
 
