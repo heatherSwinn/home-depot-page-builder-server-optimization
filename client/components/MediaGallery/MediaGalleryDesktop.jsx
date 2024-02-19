@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAppContext } from "client/components/AppContext.jsx";
 import printIcon from "client/assets/printIcon.png";
+import shareIcon from "client/assets/shareIcon.png";
 
 const MediaGalleryDesktop = ({
   currentProduct,
@@ -171,8 +172,8 @@ const MediaGalleryDesktop = ({
           <div className="gallery-share-container">
             <button className="gallery-share-button">
               <img
-                src="./components/MediaGallery/icons/shareIcon.png"
-                alt="share arrow icon"
+                src={shareIcon}
+                alt="Share Icon"
               ></img>
               Share
             </button>
@@ -180,7 +181,6 @@ const MediaGalleryDesktop = ({
           <div className="gallery-print-container">
             <button className="gallery-print-button">
               <img
-                // src="./components/MediaGallery/icons/printIcon.png"
                 src={printIcon}
                 alt="Print Icon"
               ></img>
