@@ -5,7 +5,7 @@ import truckIcon from "client/assets/truck.png";
 import searchIcon from "client/assets/search.png";
 import bucketIcon from "client/assets/bucket.png";
 import servicesIcon from "client/assets/services.png";
-import diyIcon from "client/assets/diy.png";
+import diyIcon from "client/assets/DIY.png";
 import meIcon from "client/assets/me.png";
 import cartIcon from "client/assets/cart.png";
 
