@@ -2,6 +2,7 @@ import "./mediaGalleryDesktop.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAppContext } from "client/components/AppContext.jsx";
+import printIcon from "client/assets/printIcon.png";
 
 const MediaGalleryDesktop = ({
   currentProduct,
@@ -180,8 +181,8 @@ const MediaGalleryDesktop = ({
             <button className="gallery-print-button">
               <img
                 // src="./components/MediaGallery/icons/printIcon.png"
-                src="./assets/printIcon.png"
-                alt="print icon"
+                src={printIcon}
+                alt="Print Icon"
               ></img>
               Print
             </button>
