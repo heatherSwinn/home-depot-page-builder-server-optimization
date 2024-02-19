@@ -56,7 +56,7 @@ INSERT INTO descriptions (fact, product_id) VALUES ('Includes: (2) 2.0 Ah High P
 INSERT INTO descriptions (fact, product_id) VALUES ('Over 300 ONE+ Products - All Work With Any RYOBI ONE+ 18V Battery', 1);  
      
 
-INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, is_recommended) VALUES 
+INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, isRecommended) VALUES 
   (1, 
   'This review was collected as part of a promotion. Used these for about a year now. I''m surprised it''s asking for a review now. But I love both of these drills. The HP line is competitive with all the others. And ps, same parent company as Milwaukee. And it shows. These tools hold up fine for what we do. Paired with the 4&6 AH HP batteries they are great. Full time residential contractor with some commercial mixed it. Treat your tools with respect and they''ll last you forever.',
   'SuperWeb', 
@@ -64,7 +64,7 @@ INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_d
   'Works great.',
   '2024-01-13', true);   
 
-INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, is_recommended) VALUES 
+INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, isRecommended) VALUES 
   (1, 
   'This review was collected as part of a promotion. One of the finest product I ever had. Super happy with it and this is the sixth Ryobi tool that I own within an year.', 
   'millin', 
@@ -72,7 +72,7 @@ INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_d
   'Great  tool and very efficient', 
   '2023-12-28', true);
 
-INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, is_recommended) VALUES 
+INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, isRecommended) VALUES 
   (1, 
   'This review was collected as part of a promotion. I purchased this product to kick-start my home tool collection. Being able to get two free tools as a part of the sale for this product, along with the drill and impact driver, two 2 aH HP batteries, a carrying case, and a charger was a perfect way to do that. Ryobi is a tried a true brand that cares about keeping the interoperability of their products and batteries, while also developing their kind of products with improvements such as the introduction of brushless motors and new battery tech. I cannot recommend Ryobi enough, their products are used by millions for projects of all sizes.', 
   'BradlsRad', 
@@ -80,7 +80,7 @@ INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_d
   'Great company, great product, great performance.', 
   '2023-12-25', true);
 
-INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, is_recommended) VALUES 
+INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, isRecommended) VALUES 
   (1, 
   'Having trouble with the charger. Blinking green and red otherwise great deal with the 2 free tools', 
   'Jim', 
@@ -88,7 +88,7 @@ INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_d
   null,
   '2023-12-25', true);
 
-INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, is_recommended) VALUES 
+INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, isRecommended) VALUES 
   (1, 
   'This review was collected as part of a promotion. I''ve been almost exclusively using Ryobi tools since I got started in construction in 2017. The portability v power output is just perfect for my needs. I''m a handy man for multiple properties and Ryobi does the job, every time.', 
   'Superfungi', 
@@ -96,14 +96,14 @@ INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_d
   'Excellent tools', 
   '2023-12-25', true);
 
-INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, is_recommended) VALUES 
+INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, isRecommended) VALUES 
   (1, 'This review was collected as part of a promotion.] Bought this with two free tools, I couldnt resist. Coming from the brushed impact and drill, Hp brushless has so much power in a compact size. Driving screws is so much faster with ease. Drilling holes also much quicker, I do mix a ton of drywall mud, drill does it effortlessly and it can get too wild on speed 2 full trigger. Amazing quality, definitely a bigger upgrade from the brushed models.', 
   'Ramby', 
   5, 
   'Amazing Value', 
   '2023-12-08', true);
 
-INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, is_recommended) VALUES 
+INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, isRecommended) VALUES 
   (1, 
   'I had a problem with the tale gate of my truck coming off the highway and my link tool box fell out and was run over by at car behind me and the drill and battery''s that I had inside weren''t damaged in any way Wow.', 
   'Jason', 
@@ -111,7 +111,7 @@ INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_d
   'This is tuff stuff', 
   '2023-11-05', true);
 
-INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, is_recommended) VALUES 
+INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, isRecommended) VALUES 
   (1, 
   'This review was collected as part of a promotion. Added this to my One+ Stapler, to keep battery packs interchangeable, and to replace a failed Craftsman drill. Nice quality and I appreciate built-in area light.', 
   'Anonymous', 
@@ -119,7 +119,7 @@ INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_d
   'More Ryobi for Me', 
   '2023-08-17', true);
 
-INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, is_recommended) VALUES 
+INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, isRecommended) VALUES 
   (1, 
   'This review was collected as part of a promotion. Wow just wow. I am in love with my new Impact Driver and Hammer Drill. The brushless motor gives them more power, runtime, and they are quieter than my brushed ones. This combo comes with two 2ah High Performance batteries, charger, and a tool bag. The HP batteries last longer and produce more power. This is a great bang for your buck.', 
   'Slappy',
@@ -127,7 +127,7 @@ INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_d
   'The Best Hammer Drill and Impact Driver out there!', 
   '2023-06-09', true);
 
-INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, is_recommended) VALUES 
+INSERT INTO reviews (product_id, content, reviewer_name, rating, title, review_date, isRecommended) VALUES 
   (1, 
   'This review was collected as part of a promotion. I''ve bought these drills and love it. Easy to use and charges fast.', 
   'Kids table', 
@@ -339,4 +339,4 @@ INSERT INTO productDetails_images
 ;
 
 
--- INSERT INTO options (product_id, option_content, option_pic_url) VALUES ()
+-- DeWalt Drill Product details

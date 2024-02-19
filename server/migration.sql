@@ -46,7 +46,7 @@ CREATE TABLE reviews (
   rating INT CHECK (rating >= 1 AND rating <=5),
   title TEXT,
   review_date DATE,
-  is_recommended BOOLEAN
+  isRecommended BOOLEAN
 );
 
 CREATE TABLE img_urls (
