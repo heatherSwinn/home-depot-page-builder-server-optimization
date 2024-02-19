@@ -195,18 +195,18 @@ INSERT INTO review_images (review_id, img_url) VALUES
 
   
 
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/a4958ad4-60c8-411b-bad0-49b536a543d6/svn/ryobi-impact-drivers-pblck01k-64_145.jpg');  
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/8ec5ef3f-1d32-4c18-92b6-2d05769867c5/svn/ryobi-impact-drivers-pblck01k-1d_145.jpg');
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/0374fc0b-bb15-419a-bc71-2afc8ca7a13a/svn/ryobi-impact-drivers-pblck01k-66_145.jpg');
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/6840b528-3d1d-4723-9f62-fd76acb3639e/svn/ryobi-impact-drivers-pblck01k-77_145.jpg');
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/2ef8951b-3c2d-42f0-821b-47076b8dfae9/svn/ryobi-impact-drivers-pblck01k-c3_145.jpg');
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/b73dc56e-865b-496a-bc6b-c2a30565a55e/svn/ryobi-impact-drivers-pblck01k-4f_145.jpg');
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/15506711-b77e-4331-8caf-a45fcf4b00f2/svn/ryobi-impact-drivers-pblck01k-1f_145.jpg');
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/ef08a851-4f41-43ab-b492-b15ccf2d1176/svn/ryobi-impact-drivers-pblck01k-44_145.jpg');
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/d502c0de-1433-4375-b6f5-1a0bfbfeb0a3/svn/ryobi-impact-drivers-pblck01k-fa_145.jpg');
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/0c9c7c6f-e10b-41a8-9b9d-6c81af3bcbc0/svn/ryobi-impact-drivers-pblck01k-d4_145.jpg');
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/dc8bf0aa-2019-4f8c-91d2-b4a5b66bb7a3/svn/ryobi-impact-drivers-pblck01k-31_145.jpg');
-INSERT INTO img_urls (product_id, img_url) VALUES (1, 'https://images.thdstatic.com/productImages/3ddff655-5af5-4976-8892-50fcc34823eb/svn/ryobi-impact-drivers-pblck01k-de_145.jpg');
+INSERT INTO img_urls (product_id, img_url) VALUES (1, 'a4958ad4-60c8-411b-bad0-49b536a543d6/svn/ryobi-impact-drivers-pblck01k-64_');  
+INSERT INTO img_urls (product_id, img_url) VALUES (1, '8ec5ef3f-1d32-4c18-92b6-2d05769867c5/svn/ryobi-impact-drivers-pblck01k-1d_');
+INSERT INTO img_urls (product_id, img_url) VALUES (1, '0374fc0b-bb15-419a-bc71-2afc8ca7a13a/svn/ryobi-impact-drivers-pblck01k-66_');
+INSERT INTO img_urls (product_id, img_url) VALUES (1, '6840b528-3d1d-4723-9f62-fd76acb3639e/svn/ryobi-impact-drivers-pblck01k-77_');
+INSERT INTO img_urls (product_id, img_url) VALUES (1, '2ef8951b-3c2d-42f0-821b-47076b8dfae9/svn/ryobi-impact-drivers-pblck01k-c3_');
+INSERT INTO img_urls (product_id, img_url) VALUES (1, 'b73dc56e-865b-496a-bc6b-c2a30565a55e/svn/ryobi-impact-drivers-pblck01k-4f_');
+INSERT INTO img_urls (product_id, img_url) VALUES (1, '15506711-b77e-4331-8caf-a45fcf4b00f2/svn/ryobi-impact-drivers-pblck01k-1f_');
+INSERT INTO img_urls (product_id, img_url) VALUES (1, 'ef08a851-4f41-43ab-b492-b15ccf2d1176/svn/ryobi-impact-drivers-pblck01k-44_');
+INSERT INTO img_urls (product_id, img_url) VALUES (1, 'd502c0de-1433-4375-b6f5-1a0bfbfeb0a3/svn/ryobi-impact-drivers-pblck01k-fa_');
+INSERT INTO img_urls (product_id, img_url) VALUES (1, '0c9c7c6f-e10b-41a8-9b9d-6c81af3bcbc0/svn/ryobi-impact-drivers-pblck01k-d4_');
+INSERT INTO img_urls (product_id, img_url) VALUES (1, 'dc8bf0aa-2019-4f8c-91d2-b4a5b66bb7a3/svn/ryobi-impact-drivers-pblck01k-31_');
+INSERT INTO img_urls (product_id, img_url) VALUES (1, '3ddff655-5af5-4976-8892-50fcc34823eb/svn/ryobi-impact-drivers-pblck01k-de_');
  
 INSERT INTO specifications_dimensions (product_id, depth, depth_unit_of_measure, width, width_unit_of_measure, height, height_unit_of_measure) VALUES 
   (1, 8, 'in', 3.375, 'in', 8.125, 'in');

@@ -43,9 +43,12 @@ const App = () => {
   const dewaltDrill = 2;
 
   useEffect(() => {
+    const { pathname } = window.location;
+    const productId = pathname.split("/").pop();
+
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/api/p/${dewaltDrill}`);
+        const response = await axios.get(`/api/p/${productId}`);
         setCurrentProduct(response.data[0]);
       } catch (error) {
         console.error("Error fetching product page", error);
