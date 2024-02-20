@@ -1,6 +1,7 @@
 import express from "express";
 import pg from "pg";
 import dotenv from "dotenv";
+import redisClient from "./redis.js";
 
 dotenv.config({ path: "../.env" });
 
@@ -10,6 +11,8 @@ const client = new pg.Client({
   connectionString: DATABASE_URL,
 });
 
+const DEFAULT_EXPIRATION = 3600;
+
 (async () => {
   await client.connect();
 
@@ -17,55 +20,79 @@ const client = new pg.Client({
 
   app.use(express.json());
 
-  // Test Route
-  app.get("/api/products", (req, res, next) => {
-    client
-      .query("SELECT * FROM products")
-      .then((result) => {
-        res.send(result.rows);
-      })
-      .catch((err) => {
-        console.error("Error during test query of products", err.stack);
-        res.status(500).send("Error querying product table");
-        next(err);
-      });
+  await redisClient.connect();
+
+  app.get("/api/products", async (req, res, next) => {
+    // console.log("Received request for /api/products");
+    try {
+      const products = await redisClient.get("products");
+      if (products != null) {
+        console.log("Cache hit");
+        res.send(JSON.parse(products));
+      } else {
+        console.log("Sending query to postgresql");
+        const query = "SELECT * from products";
+        const data = await client.query(query);
+        await redisClient.set("products", JSON.stringify(data.rows));
+        await redisClient.expire("products", DEFAULT_EXPIRATION);
+        res.status(200).send(data.rows);
+      }
+    } catch (error) {
+      console.error("Error with products query", error);
+      next(error);
+    }
   });
 
   // ========== Get Paramatize Product ===========
   // p is short for products (mirrors Home Depot search url)
-  app.get("/api/p/:id", (req, res, next) => {
+  app.get("/api/p/:id", async (req, res, next) => {
     const { id } = req.params;
 
-    const query = {
-      text: "SELECT * FROM products WHERE id = $1",
-      values: [id],
-    };
-
-    client
-      .query(query)
-      .then((data) => {
-        console.log(`Success getting product with name: ${id}`);
+    try {
+      const currentProduct = await redisClient.get(`product${id}`);
+      if (currentProduct != null) {
+        console.log("Cache hit");
+        res.send(JSON.parse(currentProduct));
+      } else {
+        console.log("Sending query to postgresql");
+        const query = {
+          text: "SELECT * FROM products WHERE id = $1",
+          values: [id],
+        };
+        const data = await client.query(query);
+        await redisClient.set(`product${id}`, JSON.stringify(data.rows));
+        await redisClient.expire(`product${id}`, DEFAULT_EXPIRATION);
         res.status(200).send(data.rows);
-      })
-      .catch((err) => {
-        console.error("Error searching for product", err.stack);
-        next(err);
-      });
+      }
+    } catch (err) {
+      console.error("Error with getting specific product", err.stack);
+      next(err);
+    }
   });
 
-  app.get("/api/:table_name/:id", (req, res, next) => {
+  app.get("/api/:table_name/:id", async (req, res, next) => {
     const { table_name, id } = req.params;
 
-    client
-      .query(`SELECT * FROM ${table_name} WHERE product_id = $1`, [id])
-      .then((data) => {
-        console.log(`Success getting product with id: ${id}`);
+    try {
+      const currentTable = await redisClient.get(`${table_name}${id}`);
+      if (currentTable != null) {
+        console.log("Cache hit");
+        res.send(JSON.parse(currentTable));
+      } else {
+        console.log("Sending query to postgresql");
+        const query = {
+          text: `SELECT * FROM ${table_name} WHERE product_id = $1`,
+          values: [id],
+        };
+        const data = await client.query(query);
+        await redisClient.set(`${table_name}${id}`, JSON.stringify(data.rows));
+        await redisClient.expire(`${table_name}${id}`, DEFAULT_EXPIRATION);
         res.status(200).send(data.rows);
-      })
-      .catch((err) => {
-        console.error("Error searching for product", err.stack);
-        next(err);
-      });
+      }
+    } catch (err) {
+      console.error("Error with querying table", err.stack);
+      next(err);
+    }
   });
 
   app.use((err, req, res, next) => {
