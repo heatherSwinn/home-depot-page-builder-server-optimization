@@ -11,7 +11,7 @@ const client = new pg.Client({
   connectionString: DATABASE_URL,
 });
 
-const DEFAULT_EXPIRATION = 3600;
+const DEFAULT_EXPIRATION = 120;
 
 (async () => {
   await client.connect();
