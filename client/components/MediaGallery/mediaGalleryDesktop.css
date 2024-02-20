@@ -95,13 +95,18 @@
 
 .gallery-main-image {
   cursor: crosshair;
-  object-fit: cover;
   font-size: 0px;
   position: relative;
   user-select: none;
   margin-left: 5%;
   margin-right: 5%;
   margin: 5%;
+}
+
+.gallery-main-image img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
 }
 
 .btn-thumbnail {
