@@ -2,7 +2,7 @@ import { createClient } from "redis";
 
 // Create and configure the Redis client
 const redisClient = createClient({
-  // url: "redis://red-cnbnecol6cac73ehl1sg:6379",
+  url: "redis://red-cnbnecol6cac73ehl1sg:6379",
 });
 
 // Handle Redis client errors
